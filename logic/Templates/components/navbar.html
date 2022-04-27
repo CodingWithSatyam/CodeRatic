@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeUp</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/2597c5bd66.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="{% url 'index' %}">CodeUp</a>
+      </div>
+      <div class="menu">
+        <i onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+      </div>
+      <div class="closeMenu">
+        <i class="fa-solid fa-close"></i>
+      </div>
+      <ul>
+        <li><a class="active" href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'index' %}">About</a></li>
+        <li><a href="{% url 'index' %}">Contact</a></li>
+        <li><a href="{% url 'index' %}">Templates</a></li>
+      </ul>
+    </nav>
+  </body>
+  <script src="{% static 'script.js' %}"></script>
+</html>

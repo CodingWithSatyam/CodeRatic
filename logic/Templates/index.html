@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeUp</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    {% block content %}
+    <div class="container">
+      <div class="wrapper">
+        <img src="{% static 'images/logo.png' %}" />
+        <h1>CodeUp</h1>
+        <p>Get Free Templates with source code.</p>
+        <div class="btn">
+          <a href="{% url 'index' %}">Get Now!</a>
+        </div>
+      </div>
+    </div>
+    {% comment %} Post Section {% endcomment %}
+    <div class="post_container">
+      <div class="post">
+        <div class="content">
+          <img src="{% static 'images/post1.avif' %}" alt="" />
+          <h3>CodeUp</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem, deserunt?
+          </p>
+          <div class="btn1">
+            <a href="#">Demo</a>
+            <a href="#">Download</a>
+          </div>
+        </div>
+        <div class="content">
+          <img src="{% static 'images/post2.avif' %}" alt="" />
+          <h3>MakeUp</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem, deserunt?
+          </p>
+          <div class="btn1">
+            <a href="#">Demo</a>
+            <a href="#">Download</a>
+          </div>
+        </div>
+        <div class="content">
+          <img src="{% static 'images/post3.avif' %}" alt="" />
+          <h3>MakeUp</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem, deserunt?
+          </p>
+          <div class="btn1">
+            <a href="#">Demo</a>
+            <a href="#">Download</a>
+          </div>
+        </div>
+        <div class="content">
+          <img src="{% static 'images/post2.avif' %}" alt="" />
+          <h3>MakeUp</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem, deserunt?
+          </p>
+          <div class="btn1">
+            <a href="#">Demo</a>
+            <a href="#">Download</a>
+          </div>
+        </div>
+        <div class="content">
+          <img src="{% static 'images/post1.avif' %}" alt="" />
+          <h3>MakeUp</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem, deserunt?
+          </p>
+          <div class="btn1">
+            <a href="#">Demo</a>
+            <a href="#">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock content %}
+  </body>
+</html>
