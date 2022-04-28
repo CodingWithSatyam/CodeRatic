@@ -111,7 +111,6 @@ nav ul li a:hover {
   margin: 50px;
   box-sizing: border-box;
   float: left;
-  text-align: center;
   cursor: pointer;
   padding-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
@@ -125,10 +124,20 @@ nav ul li a:hover {
   display: block;
 }
 .content h3 {
-  text-align: center;
   font-size: 30px;
-  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  margin: 20px;
+  color: #6610f2;
   padding-top: 10px;
+}
+.content p{
+  margin: 20px;
+}
+.btn1{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
 }
 .btn1 a {
   text-decoration: none;
