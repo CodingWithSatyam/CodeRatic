@@ -13,73 +13,32 @@
     <div class="container">
       <div class="wrapper">
         <img src="{% static 'images/logo.png' %}" />
-        <h1>CodeUp</h1>
+        <h1>CodeRatic</h1>
         <p>Get Free Templates with source code.</p>
         <div class="btn">
-          <a href="{% url 'index' %}">Get Now!</a>
+          <a href="#post_container">Get Now!</a>
         </div>
       </div>
     </div>
     {% comment %} Post Section {% endcomment %}
-    <div class="post_container">
+    <div id="post_container">
       <div class="post">
+        {% for post in object_list %}
         <div class="content">
-          <img src="{% static 'images/post1.avif' %}" />
-          <h1>CodeUp</h1>
+          <img src="{{ post.image.url }}" />
+          <h1>{{ post.title }}</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio.
+            {{ post.body }}
           </p>
           <div class="btn1">
-            <a href="#">Demo</a>
-            <a href="#">Download</a>
+            <a href="{{ post.demo }}">Demo</a>
+            <a href="{{ post.download }}">Download</a>
           </div>
         </div>
-        <div class="content">
-          <img src="{% static 'images/post2.avif' %}" />
-          <h1>CodeUp</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio.
-          </p>
-          <div class="btn1">
-            <a href="#">Demo</a>
-            <a href="#">Download</a>
-          </div>
-        </div>
-        <div class="content">
-          <img src="{% static 'images/post3.avif' %}" />
-          <h1>CodeUp</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio.
-          </p>
-          <div class="btn1">
-            <a href="#">Demo</a>
-            <a href="#">Download</a>
-          </div>
-        </div>
-        <div class="content">
-          <img src="{% static 'images/post1.avif' %}" />
-          <h1>CodeUp</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio.
-          </p>
-          <div class="btn1">
-            <a href="#">Demo</a>
-            <a href="#">Download</a>
-          </div>
-        </div>
-        <div class="content">
-          <img src="{% static 'images/post2.avif' %}" />
-          <h1>CodeUp</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio.
-          </p>
-          <div class="btn1">
-            <a href="#">Demo</a>
-            <a href="#">Download</a>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
     {% endblock content %}
+
   </body>
 </html>

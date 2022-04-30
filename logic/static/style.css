@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 nav {
   position: fixed;
@@ -12,6 +13,7 @@ nav {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   height: 80px;
   width: 100%;
+  top: 0;
   z-index: 999;
 }
 .logo {
@@ -62,11 +64,10 @@ nav ul li a:hover {
   background-position: center;
 }
 .wrapper {
-  position: fixed;
-  min-width: 100vw;
+  text-align: center;
+  align-items: center;
   min-height: 100vh;
   margin-top: 25vh;
-  z-index: -1;
 }
 .wrapper img {
   width: 150px;
@@ -97,12 +98,11 @@ nav ul li a:hover {
   background: red;
 }
 /* Post Section Style */
-.post_container {
-  position: absolute;
+#post_container {
   width: 100%;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  z-index: 1;
+  z-index: 99;
 }
 .post{
   width: 100%;
@@ -153,6 +153,71 @@ nav ul li a:hover {
   padding: 10px 20px;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
+}
+/* Footer Style */
+footer{
+  position: absolute;
+  background: #131313;
+  height: 40vh;
+  width: 100%;
+  z-index: 99;
+}
+.footer_content{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.pages{
+  margin-left: 100px;
+}
+.pages ul li{
+  margin-top: 30px;
+  list-style: none;
+}
+.pages ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.pages ul li:hover a{
+  color: #6610f2;
+}
+.pages ul li a i{
+  margin: 10px;
+}
+.social{
+  margin-left: 50px;
+}
+.social ul li{
+  margin-top: 30px;
+  list-style: none;
+}
+.social ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.social ul li:hover a{
+  color: #6610f2;
+}
+.social ul li a i{
+  margin: 10px;
+}
+.footer_logo{
+  margin-right: 300px;
+  margin-top: 50px;
+}
+.footer_logo a{
+  font-size: 50px;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+}
+@media (max-width: 1220px){
+  .footer_logo{
+    margin-right: 200px;
+    margin-top: 50px;
+  }
 }
 @media (max-width: 1017px){
   .content{
@@ -212,6 +277,16 @@ nav ul li a:hover {
     font-size: 30px;
     cursor: pointer;
   }
+  .footer_logo{
+    margin-right: 100px;
+    margin-top: 80px;
+  }
+  .footer_logo a{
+    font-size: 30px;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    color: #fff;
+  }
 }
 @media (max-width: 1017px){
   .content{
@@ -232,13 +307,28 @@ nav ul li a:hover {
     font-family: "Poppins", sans-serif;
   }
 }
+@media (max-width: 720px){
+  .footer_logo{
+    display: none;
+  }
+  .social{
+    margin-right: 50px;
+  }
+}
+@media (max-width: 524px){
+  .wrapper h1 {
+    margin-top: -30px;
+    font-size: 80px;
+    font-family: "Ubuntu", sans-serif;
+  }
+}
 @media (max-width: 450px) {
   .wrapper img {
     width: 100px;
   }
   .wrapper h1 {
     margin-top: -30px;
-    font-size: 80px;
+    font-size: 65px;
     font-family: "Ubuntu", sans-serif;
   }
   .wrapper p {
@@ -256,6 +346,28 @@ nav ul li a:hover {
     font-family: "Poppins", sans-serif;
     font-size: 20px;
   }
+  .pages{
+    margin-left: 10px;
+  }
+  .pages ul li{
+    margin-top: 10px;
+    list-style: none;
+  }
+  .pages ul li a i{
+    margin: 5px;
+  }
+  .social{
+    margin-left: 10px;
+  }
+  .social ul li{
+    margin-top: 5px;
+    list-style: none;
+  }
+}
+@media (max-width: 307px){
+  .wrapper h1{
+    font-size: 50px;
+  }
 }
 @media (max-width: 350px) {
   .wrapper img {
@@ -269,6 +381,33 @@ nav ul li a:hover {
   .wrapper p {
     font-size: 15px;
     font-family: "Poppins", sans-serif;
+  }
+  .pages{
+    margin-left: 10px;
+  }
+  .pages ul li{
+    margin-top: 10px;
+    list-style: none;
+  }
+  .pages ul li a{
+    font-size: 10px;
+  }
+  .pages ul li a i{
+    margin: 5px;
+  }
+  .social{
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+  .social ul li{
+    margin-top: 5px;
+    list-style: none;
+  }
+  .social ul li a{
+    font-size: 10px;
+  }
+  .social ul li a i{
+    margin: 5px;
   }
 }
 @media (max-width: 300px) {
