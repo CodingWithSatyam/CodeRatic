@@ -7,3 +7,6 @@ class Homeviews(ListView):
     model = Post
     template_name = 'index.html'
     ordering = ['-id']
+
+def about(request):
+    return render(request, "about.html")

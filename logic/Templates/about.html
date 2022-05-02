@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeRatic{% block title %} - About {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    {% block content %}
+    <div class="about">
+      <h1>CodeRatic</h1>
+      <p>
+        Thanks for Visting this website. In this website you can get paid
+        templates for free with source code. We use github for all of this. This
+        website is 100% free. So, if you want to get free templates then you can
+        download it form this website. And also you can customize these
+        templates as you want. All of these templates are free to use. You can
+        use these templates for anything. But remember you have to customize
+        these templates. Here you will get many templates and you can donwload
+        any of them. You can donwload many templates at same time for free.
+      </p>
+      <img src="{% static 'images/logo.png' %}" />
+      <p>
+        Hi, I'm Satyam Mishra and I am a Web Developer and i have create this
+        website to help other to get a website. And also i have made this
+        website 100% free. You can donwload any templates for free. Remember
+        here you will only get static website. If you want to get
+        full-stack-website then you have to do backend by yourself. So, if you
+        wnat to learn coding then you can subscribe to my YouTube channel:
+        CodingWithSatyam. There you will get free coding Videos. Go and visit my
+        channel now.
+      </p>
+    </div>
+    {% endblock content %}
+  </body>
+</html>

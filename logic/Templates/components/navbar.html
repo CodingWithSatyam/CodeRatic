@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeUp</title>
+    <title>CodeRatic{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'style.css' %}" />
     <script
       src="https://kit.fontawesome.com/2597c5bd66.js"
@@ -25,8 +25,8 @@
       </div>
       <ul>
         <li><a class="active" href="{% url 'index' %}">Home</a></li>
-        <li><a href="{% url 'index' %}">About</a></li>
-        <li><a href="{% url 'index' %}">Contact</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'about' %}">Contact</a></li>
         <li><a href="{% url 'index' %}">Templates</a></li>
       </ul>
     </nav>

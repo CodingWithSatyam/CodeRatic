@@ -213,6 +213,66 @@ footer{
   font-family: "Ubuntu", sans-serif;
   color: #fff;
 }
+/* About Page */
+.about{
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  margin: 100px 40px;
+}
+.about h1{
+  font-size: 50px;
+  font-family: "Ubuntu", sans-serif;
+  color: #ff0000;
+}
+.about p{
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+  text-align: left;
+}
+.about img{
+  width: 300px;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1220px){
   .footer_logo{
     margin-right: 200px;
@@ -320,6 +380,18 @@ footer{
     margin-top: -30px;
     font-size: 80px;
     font-family: "Ubuntu", sans-serif;
+  }
+  .about{
+    margin: 100px, 20px;
+  }
+  .about h1{
+    font-size: 40px;
+  }
+  .about p{
+    font-size: 15px;
+  }
+  .about img{
+    width: 100px;
   }
 }
 @media (max-width: 450px) {
