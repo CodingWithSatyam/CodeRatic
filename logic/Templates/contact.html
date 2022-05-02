@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeRatic{% block title %} - Contact {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    {% block content %}
+    <div class="body">
+      <div class="contact">
+        <div class="text">Contact Us</div>
+        <form method="post">
+          {% csrf_token %}
+          <div class="from-row">
+            <div class="input-data">
+              <input name="First_Name" type="text" required/>
+              <div class="underline"></div>
+              <label for="name">First Name</label>
+            </div>
+          </div>
+          <div class="from-row">
+            <div class="input-data">
+              <input name="Last_Name" type="text" required/>
+              <div class="underline"></div>
+              <label for="name">Last Name</label>
+            </div>
+          </div>
+          <div class="from-row">
+            <div class="input-data">
+              <input name="email" type="email" required/>
+              <div class="underline"></div>
+              <label for="name">Email</label>
+            </div>
+          </div>
+          <div class="from-row">
+            <div class="input-data">
+              <input name="country" type="text" required/>
+              <div class="underline"></div>
+              <label for="name">Country</label>
+            </div>
+          </div>
+          <div class="from-row textarea">
+            <div class="input-data">
+              <textarea name="message" cols="30" rows="10" required></textarea>
+              <div class="underline"></div>
+              <label for="name">Message</label>
+            </div>
+          </div>
+          <div class="from-row submit-btn">
+            <div class="input-data">
+              <div class="inner"></div>
+              <input name="message" type="submit" value="submit" required/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    {% endblock content %}
+  </body>
+</html>

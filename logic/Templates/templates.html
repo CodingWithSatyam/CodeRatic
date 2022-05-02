@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeRatic{% block title %} - Contact {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    {% block content %}
+    <div id="post_container">
+      <div class="post">
+        {% for post in object_list %}
+        <div class="content">
+          <img src="{{ post.image.url }}" />
+          <h1>{{ post.title }}</h1>
+          <p>{{ post.body }}</p>
+          <div class="btn1">
+            <a href="{{ post.demo }}">Demo</a>
+            <a href="{{ post.download }}">Download</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endblock content %}
+  </body>
+</html>
